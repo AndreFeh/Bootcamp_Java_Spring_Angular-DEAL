@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Sempre que tiver um novo elemento, ele justifica borda a borda*/   
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card{
+    width: 80%; /*720px valor real*//*100% porcentagem idependente tamanho da tela*/
+    display: flex;
+    flex-direction: row; /*Separa as coisas em linhas, nao colunas*/
+    justify-content: space-between;
+    box-shadow: 10px 8px 4px 6px rgba(0,0,0,0.28);
+    -webkit-box-shadow: 10px 8px 4px 6px rgba(0,0,0,0.28);
+    -moz-box-shadow: 10px 8px 4px 6px rgba(0,0,0,0.28);
+}
+
+.card_left, .card_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card_left{
+    /*AQUI ADICIONAMOS 0 ADICIONAL SOMENTE DE card_left!*/
+    padding-left: 10px;
+
+}
+
+.card_left > span{
+    font-weight: 400;
+}
+
+.card_left > a {
+    margin-top: 10px;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.card_left > p {
+    color: rgb(70, 70, 70);
+}
+
+.card_right{
+    flex-direction: column;
+}
+
+.img_darth_vader{
+    height: 200px;
+    width: 200px;
+}
