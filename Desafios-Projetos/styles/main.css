@@ -1,0 +1,70 @@
+/* Reset básico para garantir margens e preenchimentos zerados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Gradiente vertical (to bottom) ou horizontal (to right) */
+body {
+    background: linear-gradient(to bottom, rgba(4, 38, 255, 0.955) 10%, rgba(0, 37, 244, 0.571) 50%, rgba(4, 38, 255, 0.889) 75%);
+    background-size: 100% 100vh; /* Garante que o fundo cubra toda a tela */
+    background-repeat: no-repeat; /* Evita repetição */
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+
+.navbar {
+    background-color: rgb(0, 0, 0);
+    padding: 15px;
+    border: 1px solid white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    z-index: 10; /* Garante que a navbar fique acima do conteúdo */
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul{
+    list-style: none; /*TIRAR ESSAS BOLINHAS BRANCAS IRRITANTES*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centraliza os itens na barra de navegação */
+    align-items: center; /* Centraliza os itens verticalmente */
+    }
+
+.navbar li a{
+    color: rgb(208, 208, 208);
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+
+}
+
+.navbar li a:hover{ /*Quando Passa o mouse por cima*/
+    background-color: rgb(255, 140, 0);
+    color: white; 
+
+}
+
+/* Conteúdo principal (flexível) */
+.content {
+    flex: 1;
+    padding-top: 80px; /* Garante que o conteúdo não fique atrás da navbar */
+    text-align: center;
+}
+/* Estilo para o rodapé */
+/* Rodapé na parte inferior */
+.footer {
+    background-color: rgba(0, 42, 255, 0.416);
+    color: rgb(0, 0, 0);
+    border: 1PX solid white;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
