@@ -6,7 +6,6 @@
     <title>Movies For Me</title>
     <link rel="stylesheet" href="styles/main.css">
     <script src="src/main.js" defer></script>
-    <script src="src/CardDestaque.js" defer></script>
 </head>
 <body>
     <!-- NAV BAR = Barra do Topo -->

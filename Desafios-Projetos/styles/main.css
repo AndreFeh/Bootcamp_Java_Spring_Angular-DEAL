@@ -5,29 +5,38 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+/*Margin: Define o espaço externo ao redor do elemento.*/
+/*Border: Define a borda ao redor do elemento.*/
+/*Padding: Define o espaço interno entre o conteúdo do elemento e sua borda.*/
+
 
 /* Gradiente vertical (to bottom) ou horizontal (to right) */
 body {
-    background: linear-gradient(to right, rgba(4, 38, 255, 0.955) 10%, rgba(0, 37, 244, 0.571) 50%, rgba(4, 38, 255, 0.889) 75%);
-    background-size: 100% 100vh; /* Garante que o fundo cubra toda a tela */
+    background: linear-gradient(to bottom, rgba(94, 1, 1, 0.800) 15%, rgba(255, 255, 255, 0.534) 45%, rgba(94, 1, 1, 0.800) 75%);
+    background-size: 100%; /* % Garante que o fundo cubra toda a tela */
     background-repeat: no-repeat; /* Evita repetição */
-    min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport */
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport SE MENOS QUE 100%*/
     display: flex;
     flex-direction: column;
 }
 
-
 .navbar {
-    background-color: rgb(0, 0, 0);
-    padding: 8px;
+    background-color: rgba(94, 1, 1, 0.800); /*COR DA NAV BAR*/
+    color: white; /*COR DA FONTE*/
+    padding: 20px;
     border: 1px solid white;
-    position: fixed;
-    top: 0;
+    position: static;
     width: 100%;
-    color: rgb(0, 0, 0);
     z-index: 10; /* Garante que a navbar fique acima do conteúdo */
     display: flex;
     justify-content: center;
+    /*    background-color: rgba(94, 1, 1, 0.800); /*COR DA FOOTER BAR*/
+  /*  color: rgb(255, 255, 255);  /*COR DA FONTE*/
+/*    border: 1PX solid white;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+*/
 }
 
 .navbar ul{
@@ -40,31 +49,73 @@ body {
 
 .navbar li a{
     color: rgb(255, 255, 255);
-    padding: 10px;
-    font-size: 18px;
-    border-radius: 5px;
+    padding-inline: 10px;
+    font-size: 10px;
+    text-decoration: none ;
+
+}
+
+.navbar li .page-selec{
+    color: rgb(0, 0, 0);
+    background-color: rgb(94, 1, 1);
 
 }
 
 .navbar li a:hover{ /*Quando Passa o mouse por cima*/
     background-color: rgb(255, 0, 0);
     color: rgb(255, 255, 255); 
+}
 
+/* Estilo para o rodapé */
+/* Rodapé na parte inferior */
+.footer {
+    background-color: rgba(94, 1, 1, 0.800); /*COR DA FOOTER BAR*/
+    color: rgb(255, 255, 255);  /*COR DA FONTE*/
+    border: 1PX solid white;
+    width: 100%;
+    padding: 20px;
+    position: static;
+
+    text-align: center;
 }
 
 /* Conteúdo principal (flexível) */
 .content {
     flex: 1;
-    padding-top: 80px; /* Garante que o conteúdo não fique atrás da navbar */
+    padding-top: 1vh; /* Se o Navbar for Statico, nao precisa dessa linha */
+    padding-bottom: 1vh; /* Se o Footer for Statico, nao precisa dessa linha */
+    text-align: center;
+    align-items: center; /*CENTRALIZAR NO MEIO DA PAGINA*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; /* Distribui as divs com espaço ao redor */
+    align-items: stretch; /* Estica as divs para preencher a altura do contêiner */
+}
+
+.layout-left{
+    width: 60vh; /* Garante que o contêiner ocupe 100% da altura da viewport */
+    margin: 5px;
+    border: 1px solid black ;
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
-/* Estilo para o rodapé */
-/* Rodapé na parte inferior */
-.footer {
-    background-color: rgba(0, 42, 255, 0.416);
-    color: rgb(0, 0, 0);
-    border: 1PX solid white;
-    width: 100%;
-    padding: 20px;
+
+.layout-center{
+    width: 100%; /* Garante que o contêiner ocupe 100% da altura da viewport */
+    margin: 5px;
+    border: 1px solid black ;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.layout-right{
+    width: 60vh; /* Garante que o contêiner ocupe 100% da altura da viewport */
+    margin: 5px;
+    border: 1px solid black ;
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
+
