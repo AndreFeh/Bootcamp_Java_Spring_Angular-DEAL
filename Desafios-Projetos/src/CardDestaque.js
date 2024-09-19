@@ -72,9 +72,8 @@ class CardDestaque extends HTMLElement{
                 border-radius: 20px; 
                 background-color: black;
                 color: white;
-                width: 130px; 
-                height: 200px;
-                font-size: smaller;
+                width: 100%; 
+                height: 100%;
 
             }
 
@@ -95,22 +94,30 @@ class CardDestaque extends HTMLElement{
 
             .card__up img{
                 border: 1px solid black;
-                width: 70px;
-                height: 70px;
+                border-radius: 20px; 
+                width: 200px;
+                height: 250px;
             }
 
             .card__down{
                 display: flex;
                 flex-direction: column;
-                justify-content: right;
                 text-align: left;
-
-
             }
 
-            .card__down h3{}
+            .card__down h3{
+                font-size: large;
+                margin: 0; /* Remove qualquer margem superior/inferior */
+                padding: 0; /* Remove qualquer padding */
+            }
+
             
-            .card__down span{}
+            .card__down span{
+            font-size: large;
+            color: grey;
+            margin: 0; /* Remove qualquer margem superior/inferior */
+            padding: 0; /* Remove qualquer padding */
+            }
         `;
         return style;
     }

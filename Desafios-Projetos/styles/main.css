@@ -29,12 +29,7 @@ body {
     z-index: 10; /* Garante que a navbar fique acima do conteúdo */
     display: flex;
     justify-content: center;
-    /*    background-color: rgba(94, 1, 1, 0.800); /*COR DA FOOTER BAR*/
-  /*  color: rgb(255, 255, 255);  /*COR DA FONTE*/
-/*    border: 1PX solid white;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
+/*    text-align: center;
 */
 }
 
@@ -69,7 +64,7 @@ body {
 .footer {
     background-color: rgba(94, 1, 1, 0.800); /*COR DA FOOTER BAR*/
     color: rgb(255, 255, 255);  /*COR DA FONTE*/
-    border: 1PX solid white;
+    border: 1px solid white;
     width: 100%;
     padding: 20px;
     position: static;
@@ -104,6 +99,7 @@ body {
     width: 100%; /* Garante que o contêiner ocupe 100% da altura da viewport */
     margin: 5px;
     border: 1px solid black ;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     text-align: justify;
@@ -126,6 +122,5 @@ body .destaque{
     flex-wrap: wrap;
     gap: 10px; /* Espaçamento entre os cards */
     justify-content: center;
-    
-    
+
 }
