@@ -66,14 +66,16 @@ class CardDestaque extends HTMLElement{
             .card__destaque{
                 display: flex;
                 flex-direction: column;
-                border: 1px solid #ccc;
-                 
+                border: 1px solid white;
+                box-sizing: border-box;
                 padding: 10px; 
-                border-radius: 5px; 
+                border-radius: 20px; 
                 background-color: black;
                 color: white;
-                width: 100px; 
-                height: 100px;
+                width: 130px; 
+                height: 200px;
+                font-size: smaller;
+
             }
 
             .card__link {
@@ -100,6 +102,9 @@ class CardDestaque extends HTMLElement{
             .card__down{
                 display: flex;
                 flex-direction: column;
+                justify-content: right;
+                text-align: left;
+
 
             }
 

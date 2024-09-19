@@ -12,7 +12,7 @@
 
 /* Gradiente vertical (to bottom) ou horizontal (to right) */
 body {
-    background: linear-gradient(to bottom, rgba(94, 1, 1, 0.800) 15%, rgba(255, 255, 255, 0.534) 45%, rgba(94, 1, 1, 0.800) 75%);
+    background: linear-gradient(to bottom, rgba(94, 1, 1, 0.525) 15%, rgba(255, 255, 255, 0.534) 45%, rgba(94, 1, 1, 0.800) 75%);
     background-size: 100% 100%; /* % Garante que o fundo cubra toda a tela */
     min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport SE MENOS QUE 100%*/
     display: flex;
@@ -44,20 +44,19 @@ body {
     flex-direction: row;
     justify-content: center; /* Centraliza os itens na barra de navegação */
     align-items: center; /* Centraliza os itens verticalmente */
-    }
+}
 
 .navbar li a{
+    border-radius: 10px; 
     color: rgb(255, 255, 255);
     padding-inline: 10px;
     font-size: 10px;
     text-decoration: none ;
-
 }
 
 .navbar li .page-selec{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     background-color: rgb(94, 1, 1);
-
 }
 
 .navbar li a:hover{ /*Quando Passa o mouse por cima*/
