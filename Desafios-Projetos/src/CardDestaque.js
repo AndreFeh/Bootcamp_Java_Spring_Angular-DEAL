@@ -21,7 +21,6 @@ overflow: hidden: Garante que nenhum conteúdo excedente (texto ou imagem) ultra
 object-fit: cover: Ajusta a imagem para preencher o container, cortando partes se necessário, sem distorcer a imagem.
 white-space: nowrap: Impede que o texto quebre em múltiplas linhas, mantendo tudo em uma linha.
 text-overflow: ellipsis: Se o texto for muito longo, adiciona "..." no final, indicando que há mais texto, mas sem ultrapassar os limites do container.
-
 */
 
     build(){

@@ -24,7 +24,7 @@ body {
     color: white; /*COR DA FONTE*/
     padding: 20px;
     border: 1px solid white;
-    position: static;
+    position: static, fixed;
     width: 100%;
     z-index: 10; /* Garante que a navbar fique acima do conteúdo */
     display: flex;
@@ -95,7 +95,16 @@ body {
     position: static;
 }
 
-.layout-center{
+.layout-right{
+    width: 60vh; /* Garante que o contêiner ocupe 100% da altura da viewport */
+    margin: 5px;
+    border: 1px solid black ;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: static;
+
+}.layout-center{
     width: 100%; /* Garante que o contêiner ocupe 100% da altura da viewport */
     margin: 5px;
     border: 1px solid black ;
@@ -106,19 +115,13 @@ body {
     position: static;
 }
 
-.layout-right{
-    width: 60vh; /* Garante que o contêiner ocupe 100% da altura da viewport */
-    margin: 5px;
-    border: 1px solid black ;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    position: static;
 
-}
 .title-destaque{
     display: flex;
     flex-direction: column ;    
+    margin: 1px;
+    padding: 10px;
+    border: 1px solid black;
 }
 
 .destaque{
@@ -126,5 +129,16 @@ body {
     flex-wrap: wrap;
     gap: 10px; /* Espaçamento entre os cards */
     justify-content: center;
+
+    padding: 10px;
+    border: 1px solid black;
 }
 
+.link_drm, .link_flm, .link_anm{
+        display: block;
+        text-decoration: none; /* GPT Remove o sublinhado do link */
+        color: inherit; /* Garante que o texto do link herde a cor do card */
+        width: 100%;
+        height: 100%;
+        overflow: hidden; /* GPT Garante que o link também não ultrapasse os limites */
+}
