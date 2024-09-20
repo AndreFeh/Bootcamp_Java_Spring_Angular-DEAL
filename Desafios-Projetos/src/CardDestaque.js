@@ -16,6 +16,14 @@ class CardDestaque extends HTMLElement{
 </card-destaque>
 */
 
+/*
+overflow: hidden: Garante que nenhum conteúdo excedente (texto ou imagem) ultrapasse os limites do card.
+object-fit: cover: Ajusta a imagem para preencher o container, cortando partes se necessário, sem distorcer a imagem.
+white-space: nowrap: Impede que o texto quebre em múltiplas linhas, mantendo tudo em uma linha.
+text-overflow: ellipsis: Se o texto for muito longo, adiciona "..." no final, indicando que há mais texto, mas sem ultrapassar os limites do container.
+
+*/
+
     build(){
         const componentRoot = document.createElement("div");
         componentRoot.setAttribute("class", "card__destaque");
@@ -40,7 +48,7 @@ class CardDestaque extends HTMLElement{
 
         const nome = document.createElement("h3");
         const categoria = document.createElement("span");
-        nome.textContent = "Anime " + this.getAttribute("nome");
+        nome.textContent = this.getAttribute("nome");
         categoria.textContent = this.getAttribute("categoria");
 
         cardUp.appendChild(imageDestaque);
@@ -66,49 +74,60 @@ class CardDestaque extends HTMLElement{
             .card__destaque{
                 display: flex;
                 flex-direction: column;
-                border: 1px solid white;
                 box-sizing: border-box;
+                border: 1px solid white;
                 padding: 10px; 
                 border-radius: 20px; 
                 background-color: black;
                 color: white;
-                width: 100%; 
+                width: 20vh; 
                 height: 100%;
-
+                overflow: hidden; /* GPT Garante que nenhum conteúdo ultrapasse os limites do card */
             }
 
             .card__link {
                 display: block;
-                text-decoration: none; /* Remove o sublinhado do link */
+                text-decoration: none; /* GPT Remove o sublinhado do link */
                 color: inherit; /* Garante que o texto do link herde a cor do card */
                 width: 100%;
                 height: 100%;
+                overflow: hidden; /* GPT Garante que o link também não ultrapasse os limites */
+
             }
 
             .card__up{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                
+                width: 100%;
+                height: 70%;
+                overflow: hidden; /* Previne que a imagem ultrapasse os limites */
+
             }
 
             .card__up img{
                 border: 1px solid black;
                 border-radius: 20px; 
-                width: 200px;
-                height: 250px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Faz com que a imagem se ajuste ao container sem distorcer */
             }
 
             .card__down{
                 display: flex;
                 flex-direction: column;
-                text-align: left;
+                align-items: left;
+                width: 100%;
+                height: 30%;
             }
 
             .card__down h3{
                 font-size: large;
                 margin: 0; /* Remove qualquer margem superior/inferior */
                 padding: 0; /* Remove qualquer padding */
+                white-space: nowrap; /* Previne que o texto quebre em várias linhas */
+                overflow: hidden; /* Esconde o excesso de texto */
+                text-overflow: ellipsis; /* Adiciona "..." ao final se o texto for muito longo */
             }
 
             
@@ -117,6 +136,11 @@ class CardDestaque extends HTMLElement{
             color: grey;
             margin: 0; /* Remove qualquer margem superior/inferior */
             padding: 0; /* Remove qualquer padding */
+            white-space: nowrap; /* Previne que o texto quebre em várias linhas */
+
+            overflow: hidden; /* Previne que o texto ultrapasse os limites */
+            text-overflow: ellipsis; /* Adiciona "..." ao final se o texto for muito longo */
+
             }
         `;
         return style;
