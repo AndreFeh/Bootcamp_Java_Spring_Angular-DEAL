@@ -56,3 +56,27 @@ console.log (aniversario.toString());
 
 aniversario1 = new Date("2022-01-30");
 console.log (aniversario1.toString());
+
+console.log("FUNÇÕES");
+function addNumber(x : number, y : number) : number /*DECLARA QUE RETORNA NUMERO*/{
+    return x + y;
+}
+
+let soma : number = addNumber(4,7.02);
+
+function addToHello(name:string)/*NAO ESTA DECLARADO, MAS A LINGUAGEM ENTENDE, DE MANEIRA IMPLICITA*/{
+    return `Hello ${name}`;
+}
+
+console.log(addToHello("Andre"));
+
+function CallToPhone (phone:number | string): number | string /*Aceita como String ou  numero*/{
+    return phone;
+};
+console.log(CallToPhone("41995368352"));
+
+async function getDatabase(id:number): Promise <string> {
+    return "Andre";  
+};
+
+console.log(getDatabase(1));
