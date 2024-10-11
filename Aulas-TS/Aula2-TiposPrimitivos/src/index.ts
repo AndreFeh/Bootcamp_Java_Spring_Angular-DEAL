@@ -80,3 +80,42 @@ async function getDatabase(id:number): Promise <string> {
 };
 
 console.log(getDatabase(1));
+
+// criando uma tipagem === um modelo de objeto
+interface robot{
+    id: number;
+    name: string;
+};
+
+const bot: robot={
+    id: 1,
+    name: "bomberman",
+};
+
+interface robot2{
+    /*Torna esse campo somente LEITURA>>> */
+    readonly id: number | string; 
+    /*<<< Ele pode aceitar tanto NUMERO OU STRING*/
+    name: string;
+};
+
+const ironman: robot2 = {
+    id: "2",
+    name: "iron man"
+};
+
+console.log(ironman);
+console.log(bot.id=1013);
+
+class Pessoa implements robot2{/* SE NAO IMPLEMENTADO AS COISAS DA INTERFACE, VAI DAR ERRO */
+    id: string | number;
+    name: string;
+
+    constructor(id:string|number, name:string){
+        this.id = id
+        this.name = name
+    }
+    
+};
+
+const pessoa = new Pessoa(1,"Andre")

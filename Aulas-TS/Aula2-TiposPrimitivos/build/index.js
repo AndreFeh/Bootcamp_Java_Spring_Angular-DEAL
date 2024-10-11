@@ -69,3 +69,23 @@ function getDatabase(id) {
 }
 ;
 console.log(getDatabase(1));
+;
+const bot = {
+    id: 1,
+    name: "bomberman",
+};
+;
+const ironman = {
+    id: "2",
+    name: "iron man"
+};
+console.log(ironman);
+console.log(bot.id = 1013);
+class Pessoa {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+}
+;
+const pessoa = new Pessoa(1, "Andre");
