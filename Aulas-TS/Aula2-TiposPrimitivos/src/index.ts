@@ -118,4 +118,4 @@ class Pessoa implements robot2{/* SE NAO IMPLEMENTADO AS COISAS DA INTERFACE, VA
     
 };
 
-const pessoa = new Pessoa(1,"Andre")
+const pessoa = new Pessoa(1,"Andre");
