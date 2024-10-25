@@ -8,16 +8,10 @@ import { Button } from './components/button.component';
 
 
 @NgModule({
-  declarations: [
-    AppComponent, 
-    Button
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, Button],
+  imports: [BrowserModule,AppRoutingModule],
   
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
