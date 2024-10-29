@@ -16,4 +16,9 @@ export class Button{
     // buttonObject={
     //     label: 'Adicionar ao Carrinho',
     // };
+
+    getAlert(){
+        alert(this.label);
+    }
 }
+
