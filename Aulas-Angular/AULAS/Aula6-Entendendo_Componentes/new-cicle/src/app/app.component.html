@@ -1,3 +1,5 @@
-<h1>MY APPLICATION</h1>
-<app-title></app-title>
+<!-- <h1>MY APPLICATION</h1>
+<app-title></app-title> -->
+<app-check-sample *ngIf="isAliveCheckSample"/>
+<button (click)="disposeCheckSample()">destroy</button>
 <router-outlet/>
