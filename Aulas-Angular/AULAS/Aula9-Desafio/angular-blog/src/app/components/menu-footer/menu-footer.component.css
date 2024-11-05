@@ -1,0 +1,43 @@
+.container__menu-footer{
+  display: flex;
+  flex-direction: row;
+  /* border: 2px solid yellow; */
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.menu-title{
+  font-size: large;
+  margin: 15px;
+  /* border: 2px solid green; */
+
+}
+
+
+.menu-footer{
+  margin: 15px;
+  /* border: 2px solid green; */
+
+
+}
+
+.menu-footer > ul{
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+}
+
+.menu-footer > ul > li{
+margin-right: 10px;
+list-style: none;
+}
+
+.menu-footer > ul > li > a{
+  font-size: large;
+}
+
+.menu-footer > ul > li > a:hover {
+  color: red;
+}
+
