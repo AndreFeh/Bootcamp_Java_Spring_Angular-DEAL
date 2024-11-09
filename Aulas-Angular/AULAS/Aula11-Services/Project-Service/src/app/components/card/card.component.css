@@ -21,6 +21,12 @@
   margin-left: auto;
   margin-right: auto;
   height: 70%;
+
+}
+
+.card__body > img{
+  height: 99%;
+  width: 99%;
 }
 
 .card__stats{
